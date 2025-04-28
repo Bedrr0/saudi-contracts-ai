@@ -1,0 +1,26 @@
+"""
+Requirements file for the Saudi AI Contracts system.
+"""
+
+# Core dependencies
+PyPDF2==3.0.1
+python-docx==0.8.11
+langdetect==1.0.9
+nltk==3.8.1
+markdown==3.4.3
+Jinja2==3.1.2
+pdfkit==1.0.0
+
+# Web framework for API
+Flask==2.3.2
+Flask-RESTful==0.3.10
+Flask-Cors==4.0.0
+
+# NLP and text processing
+scikit-learn==1.2.2
+transformers==4.28.1
+arabert==1.0.0
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.65.0
