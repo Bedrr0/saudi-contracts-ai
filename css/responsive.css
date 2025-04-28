@@ -1,0 +1,316 @@
+/* Responsive Styles for Saudi AI Contracts */
+
+/* ===== Mobile First Approach ===== */
+/* Base styles are already in main.css */
+
+/* ===== Small devices (landscape phones, 576px and up) ===== */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .hero-title {
+        font-size: 2.75rem;
+    }
+    
+    .hero-description {
+        font-size: 1.125rem;
+    }
+    
+    .trust-indicators {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .regulations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Medium devices (tablets, 768px and up) ===== */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .hero-content {
+        flex: 1;
+        padding-right: var(--spacing-xl);
+    }
+    
+    html[lang="ar"] .hero-content {
+        padding-right: 0;
+        padding-left: var(--spacing-xl);
+    }
+    
+    .hero-image {
+        flex: 1;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-description {
+        font-size: 1.25rem;
+    }
+    
+    .trust-indicators {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .about-content {
+        flex-direction: row;
+        gap: var(--spacing-2xl);
+    }
+    
+    .about-text {
+        flex: 1;
+    }
+    
+    .about-card {
+        flex: 1;
+    }
+    
+    .regulations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== Large devices (desktops, 992px and up) ===== */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.25rem;
+    }
+    
+    .regulations-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .plans-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== Extra large devices (large desktops, 1200px and up) ===== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* ===== RTL Specific Adjustments ===== */
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="ar"] .main-nav ul {
+    padding-right: 0;
+}
+
+html[lang="ar"] .hero-buttons {
+    flex-direction: row-reverse;
+}
+
+html[lang="ar"] .icon-arrow {
+    transform: scaleX(-1);
+}
+
+html[lang="ar"] .badge-accuracy {
+    right: auto;
+    left: -1rem;
+}
+
+html[lang="ar"] .badge-compliance {
+    left: auto;
+    right: -1rem;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .site-header,
+    .mobile-menu,
+    .language-switcher,
+    .hero-buttons,
+    .upload-section,
+    .plans-section,
+    .contact-section,
+    .site-footer {
+        display: none !important;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+/* ===== Accessibility Enhancements ===== */
+:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===== Dark Mode Support ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1F2937;
+        --black: #F9FAFB;
+        --gray-50: #111827;
+        --gray-100: #1F2937;
+        --gray-200: #374151;
+        --gray-300: #4B5563;
+        --gray-400: #6B7280;
+        --gray-500: #9CA3AF;
+        --gray-600: #D1D5DB;
+        --gray-700: #E5E7EB;
+        --gray-800: #F3F4F6;
+        --gray-900: #F9FAFB;
+    }
+    
+    body {
+        color: var(--gray-200);
+    }
+    
+    .site-header {
+        background-color: var(--gray-900);
+    }
+    
+    .logo a {
+        color: var(--primary-light);
+    }
+    
+    .main-nav a {
+        color: var(--gray-300);
+    }
+    
+    .main-nav a:hover {
+        color: var(--primary-light);
+    }
+    
+    .mobile-menu {
+        background-color: var(--gray-900);
+    }
+    
+    .mobile-nav a {
+        color: var(--gray-300);
+    }
+    
+    .mobile-nav a:hover {
+        color: var(--primary-light);
+    }
+    
+    .upload-card,
+    .about-card,
+    .regulation-item,
+    .step-item,
+    .plan-card,
+    .contact-card,
+    .hours-item {
+        background-color: var(--gray-900);
+        border-color: var(--gray-800);
+    }
+    
+    .card-header {
+        background-color: rgba(59, 130, 246, 0.1);
+        border-bottom-color: rgba(59, 130, 246, 0.2);
+    }
+    
+    .card-footer {
+        background-color: var(--gray-800);
+        border-top-color: var(--gray-700);
+    }
+    
+    .upload-area {
+        border-color: var(--gray-700);
+    }
+    
+    .contract-type select,
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background-color: var(--gray-800);
+        border-color: var(--gray-700);
+        color: var(--gray-300);
+    }
+    
+    .how-it-works {
+        background-color: var(--gray-800);
+    }
+}

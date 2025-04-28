@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero Image</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1E40AF" offset="0%"></stop>
+            <stop stop-color="#4F46E5" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="800" height="400" rx="8"></rect>
+    </defs>
+    <g id="Hero-Image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Background">
+            <use fill="#FFFFFF" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" style="mix-blend-mode: multiply;" xlink:href="#path-2"></use>
+        </g>
+        
+        <!-- Document Container -->
+        <rect id="Document-Container" fill="#FFFFFF" x="200" y="50" width="400" height="300" rx="8"></rect>
+        
+        <!-- Document Header -->
+        <rect id="Document-Header" fill="#1E40AF" x="220" y="70" width="360" height="40" rx="4"></rect>
+        <text id="Contract-Title" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+            <tspan x="240" y="95">عقد عمل - Employment Contract</tspan>
+        </text>
+        
+        <!-- Document Content -->
+        <rect id="Line-1" fill="#E5E7EB" x="220" y="130" width="360" height="8" rx="4"></rect>
+        <rect id="Line-2" fill="#E5E7EB" x="220" y="150" width="360" height="8" rx="4"></rect>
+        <rect id="Line-3" fill="#E5E7EB" x="220" y="170" width="260" height="8" rx="4"></rect>
+        
+        <rect id="Line-4" fill="#E5E7EB" x="220" y="200" width="360" height="8" rx="4"></rect>
+        <rect id="Line-5" fill="#E5E7EB" x="220" y="220" width="360" height="8" rx="4"></rect>
+        <rect id="Line-6" fill="#E5E7EB" x="220" y="240" width="180" height="8" rx="4"></rect>
+        
+        <rect id="Line-7" fill="#E5E7EB" x="220" y="270" width="360" height="8" rx="4"></rect>
+        <rect id="Line-8" fill="#E5E7EB" x="220" y="290" width="260" height="8" rx="4"></rect>
+        
+        <!-- Analysis Overlay -->
+        <rect id="Analysis-Highlight-1" fill="#10B981" opacity="0.3" x="220" y="130" width="360" height="8" rx="4"></rect>
+        <rect id="Analysis-Highlight-2" fill="#EF4444" opacity="0.3" x="220" y="200" width="360" height="8" rx="4"></rect>
+        
+        <!-- Analysis Badges -->
+        <g id="Compliance-Badge" transform="translate(620, 80)">
+            <circle fill="#10B981" cx="25" cy="25" r="25"></circle>
+            <path d="M15,25 L22,32 L35,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        
+        <g id="Warning-Badge" transform="translate(620, 200)">
+            <circle fill="#EF4444" cx="25" cy="25" r="25"></circle>
+            <path d="M25,15 L25,25 M25,35 L25,35" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        
+        <!-- Analysis Percentage -->
+        <g id="Analysis-Percentage" transform="translate(350, 330)">
+            <circle fill="#1E40AF" opacity="0.1" cx="50" cy="50" r="40"></circle>
+            <path d="M50,10 A40,40 0 0 1 85,50" stroke="#1E40AF" stroke-width="8" stroke-linecap="round"></path>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1E40AF" text-anchor="middle">
+                <tspan x="50" y="58">98%</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

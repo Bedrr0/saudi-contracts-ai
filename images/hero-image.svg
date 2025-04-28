@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Contract Analysis Demo</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1E40AF" offset="0%"></stop>
+            <stop stop-color="#4F46E5" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="800" height="400" rx="8"></rect>
+    </defs>
+    <g id="Contract-Analysis-Demo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Background">
+            <use fill="#F3F4F6" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" style="mix-blend-mode: overlay;" xlink:href="#path-2"></use>
+        </g>
+        <text id="Contract-Analysis-De" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#333333">
+            <tspan x="200" y="200">Contract Analysis Demo</tspan>
+        </text>
+        <g id="Document-Icon" transform="translate(350.000000, 100.000000)">
+            <rect id="Document-Background" fill="#FFFFFF" x="0" y="0" width="100" height="120" rx="4"></rect>
+            <rect id="Header" fill="#1E40AF" x="10" y="20" width="80" height="10" rx="2"></rect>
+            <rect id="Line-1" fill="#E5E7EB" x="10" y="40" width="80" height="4" rx="2"></rect>
+            <rect id="Line-2" fill="#E5E7EB" x="10" y="50" width="80" height="4" rx="2"></rect>
+            <rect id="Line-3" fill="#E5E7EB" x="10" y="60" width="60" height="4" rx="2"></rect>
+            <rect id="Line-4" fill="#E5E7EB" x="10" y="80" width="80" height="4" rx="2"></rect>
+            <rect id="Line-5" fill="#E5E7EB" x="10" y="90" width="80" height="4" rx="2"></rect>
+            <rect id="Line-6" fill="#E5E7EB" x="10" y="100" width="40" height="4" rx="2"></rect>
+        </g>
+        <g id="Check-Icon" transform="translate(500.000000, 250.000000)">
+            <circle id="Check-Background" fill="#10B981" cx="25" cy="25" r="25"></circle>
+            <path d="M15,25 L22,32 L35,18" id="Check-Mark" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>
