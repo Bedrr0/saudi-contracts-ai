@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  
+  --primary: #1e40af;
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f2937;
+  
+  --accent: #dbeafe;
+  --accent-foreground: #1e40af;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] .rtl\:space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+  
+  [dir="rtl"] .rtl\:mr-0 {
+    margin-right: 0;
+  }
+  
+  [dir="rtl"] .rtl\:ml-2 {
+    margin-left: 0.5rem;
+  }
+  
+  [dir="rtl"] .rtl\:ml-3 {
+    margin-left: 0.75rem;
+  }
+  
+  [dir="rtl"] .rtl\:mr-0 {
+    margin-right: 0;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  /* Font families */
+  .font-cairo {
+    font-family: var(--font-cairo);
+  }
+  
+  .font-inter {
+    font-family: var(--font-inter);
+  }
+  
+  /* Custom animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Custom shadows */
+  .shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Premium UI elements */
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--primary), #4f46e5);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Responsive design helpers */
+.responsive-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Premium card styles */
+.premium-card {
+  @apply bg-white rounded-lg shadow-card border border-gray-100 overflow-hidden transition-shadow duration-300;
+}
+
+.premium-card:hover {
+  @apply shadow-card-hover;
+}
+
+.premium-card-header {
+  @apply bg-primary/5 border-b border-primary/10 p-6;
+}
+
+.premium-card-content {
+  @apply p-6;
+}
+
+/* Elegant progress bar */
+.elegant-progress {
+  @apply h-2 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.elegant-progress-bar {
+  @apply h-full rounded-full transition-all duration-500;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
